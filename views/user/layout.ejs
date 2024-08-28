@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><%= res.locals.siteName%> | Dashboard</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<!-- font-family: 'Open Sans', sans-serif; -->
+<link href='/style/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="" />
+<link href='/style/custom.css' rel='stylesheet' type='text/css'>
+<link href='/style/default.css' rel='stylesheet' type='text/css'>
+<link href='/style/tab.css' rel='stylesheet' type='text/css'>
+<link rel="icon" href="/styles/images/favicon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<script src='/style/jquery.js' type='text/javascript'></script>
+<script src='/style/setting2.js' type='text/javascript'></script>
+<script src='/style/tab.js' type='text/javascript'></script>
+<script src='/style/bootstrap.min.js' type='text/javascript'></script>
+
+</head>
+
+<body class="loginarea">
+<div class="wrapper-account">
+  <div class="headerContainer">
+    <div class="headerInner">
+      <div class="hdRight">
+        <div class="mainNavRight">
+          <div class="navbar">
+            <div class="navbar-inner">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ 
+
+<div class="inside_inner_account">
+  <div class="member_wrap">
+  <div class="membersidebar">
+     <ul>
+      <li><a href="/dashboard">My Account</a></li><li><a href="/deposit">Deposit</a></li><li><a href="/history">Deposits History</a></li><li><a href="/withdraw">Withdraw</a></li><li></li><li><a href="/referals">Referrals</a></li><li><a href="/logout">Logout</a></li>
+  </ul>
+  </div>
+  <div class="member-container">
+  <div class="account_top">
+    <div class="user_left">
+      <h2>Welcome, <span><%= req.user.fullname %></span></h2>
+    </div>
+    <div class="affiliate_top">Affiliate Link:<a href="http://<%= res.locals.siteDomain%>?ref=<%= req.user.username %>" class="ref-link">http://<%= res.locals.siteDomain %>?ref=<%= req.user.username%></a></div>
+  </div>
+  <div class="member_right">
+
+
+ <%- body %>
+
+
+ <div class="footerContainer">
+    <div class="footerInner">
+      <div class="ctn-footer-top">
+        <div class="ctn-ft-left">
+          <p>&copy; 2022 <%= res.locals.siteDomain%> All Rights Reserved.</p>
+        </div>
+        <div class="ft-solid">
+          <a href="https://www.facebook.com/VisualHyipcom/" target="_blank" class="per"></a>
+          <a href="https://twitter.com/" target="_blank" class="bit"></a>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div> <!-- end bot footer -->
+
+  <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = 'e1fd24b9f9c3c0649c57ec243a51450e076f9744';
+  window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+  })(document);
+  </script>
+  <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
+
+    
+    <script type="text/javascript">
+  $(document).ready(function() {
+  
+      $('.accordion>dl>dt>a').click(function() 
+      {
+        $(this).toggleClass("rotate0");
+      });
+        /*------- parse price --------*/
+        function parsePriceCrypto()
+        {
+          returnString = "";
+          
+          $.post( "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,LTC,ETH,BCH,XRP&tsyms=USD", function( data )
+          {
+            $('#price_btc').text('$'+data['BTC']['USD']);
+            $('#price_ltc').text('$'+data['LTC']['USD']);
+            $('#price_eth').text('$'+data['ETH']['USD']);
+            $('#price_bch').text('$'+data['BCH']['USD']);
+            $('#price_xrp').text('$'+data['XRP']['USD']);
+          });
+        }
+        parsePriceCrypto();
+        
+        setInterval(function()
+        {
+          parsePriceCrypto();
+        }
+        , 5000);
+      });
+      
+      $('.language').click(function() {
+        $(this).toggleClass('active');
+      });
+      
+      $('.mobileMenu').click(function() {
+        $('.menu').toggleClass('mobile');
+        $(this).toggleClass('rotate');
+      });
+  
+  
+    </script> 
+  </html>

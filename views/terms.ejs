@@ -1,0 +1,81 @@
+<script>
+  $(".menu").click(function () {
+    $("nav").slideToggle();
+  });
+</script>
+<script>
+  $(function () {
+    $("#tabs").tabs();
+  });
+</script>
+
+<div class="banner-area center">
+  <div class="area">
+    <div class="bodycontainer2">
+      <h1 class="tlt text-white" style="margin: 20px 0">
+        TERMS <span class="text-default">AND CONDITIONS</span>
+      </h1>
+      <div class="banner-title">
+        <span class="decor-equal"></span>
+      </div>
+      <div style="margin: 20px 0">
+        <a href="/">HOME</a> / TERMS AND CONDITIONS
+      </div>
+    </div>
+    <div id="particles-js">
+      <canvas
+        class="particles-js-canvas-el"
+        width="1222"
+        height="298"
+        style="width: 100%; height: 100%"
+      ></canvas>
+    </div>
+  </div>
+</div>
+<div class="bodycontainer2 padding">
+  <br /><br />
+  <div class="title_container">
+    <h4>Please read the following rules carefully before signing in.</h4>
+    <span class="decor_default"></span>
+  </div>
+  <ol>
+    <li>
+      <%= res.locals.siteName%> is totally different from its competitors trying
+      to achieve something special starting with the website design, trading
+      platform, and extremely functional. Since first beginning a few years ago,
+      <%= res.locals.siteName%> has created a name for itself between traders.
+      The broker is magnificent for traders because of its solid mining /trading
+      platform and a diversity of assets to invest/trade.
+    </li>
+  </ol>
+</div>
+<br /><br /><a
+  href="#"
+  id="back-to-top"
+  class="back-to-top fa fa-arrow-up show-back-to-top"
+></a>
+<script>
+  /*--window Scroll functions--*/
+  $(window).on("scroll", function () {
+    /*--show and hide scroll to top --*/
+    var ScrollTop = $("#back-to-top");
+    if ($(window).scrollTop() > 500) {
+      ScrollTop.fadeIn(1000);
+    } else {
+      ScrollTop.fadeOut(1000);
+    }
+  });
+</script>
+<div class="footer_bg center">
+  <div class="area">
+    <div class="bodycontainer">
+      <div style="z-index: 2; position: relative">
+        <h2 class="margintb">GET STARTED TODAY WITH BITCOIN INVESTMENT</h2>
+        <p class="margintb">
+          Open account for free and start trading Bitcoins!
+        </p>
+        <a href="/start" class="btn">GET STARTED</a>
+      </div>
+    </div>
+  </div>
+</div>
