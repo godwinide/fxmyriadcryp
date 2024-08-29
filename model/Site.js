@@ -1,25 +1,9 @@
 const { model, Schema } = require("mongoose");
 
 const SiteSchema = new Schema({
-    bitcoinAddress: {
+    wallet: {
         type: String,
-        required: false
-    },
-    bchAddress: {
-        type: String,
-        required: false
-    },
-    ethereumAddress: {
-        type: String,
-        required: false
-    },
-    usdtAddress: {
-        type: String,
-        required: false
-    },
-    whatsappNumber: {
-        type: String,
-        required: false
+        required: true
     }
 });
 

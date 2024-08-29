@@ -1,623 +1,763 @@
-<link rel="stylesheet" type="text/css" href="/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css" />
-<script src="/trade/js/jquery.fittext.js"></script>
-
-<script>
-  $(".menu").click(function () {
-    $("nav").slideToggle();
-  });
-</script>
-<script>
-  $(function () {
-    $("#tabs").tabs();
-  });
-</script>
-<script src="/js/jquery-modal-video.min.js"></script>
-<link rel="stylesheet" href="css/modal-video.min.css" />
-<script>
-  $(".js-video-button").modalVideo();
-</script>
-
-<style>
-  .slick-dots {
-    bottom: -10px !important;
-  }
-
-  .slick-dotted.slick-slider {
-    margin-bottom: 0px;
-  }
-</style>
-
-<div class="Modern-Slider row center">
-  <!-- Item -->
-  <div class="item">
-    <div class="img-fill">
-      <img src="/images/912465.jpg" alt="" />
-      <div class="info-slick">
-        <div>
-          <h1 class="headering">
-            <span class="text-default">SECURE</span> AND
-            <span class="text-default">EASY WAY</span><br />TO BITCOIN MINING
-          </h1>
-          <a href="/register" class="btn">LEARN MORE</a>
-        </div>
-      </div>
-    </div>
+<div id="preloader" class="loader">
+  <div class="sk-three-bounce">
+    <div class="sk-bounce-1 sk-child"></div>
+    <div class="sk-bounce-2 sk-child"></div>
+    <div class="sk-bounce-3 sk-child"></div>
   </div>
-  <!-- // Item -->
-  <!-- Item -->
-  <div class="item">
-    <div class="img-fill">
-      <img src="/images/913441.jpg" alt="" />
-      <div class="info-slick">
-        <div>
-          <h1 class="headering">
-            <span class="text-default">BITCOIN</span> INVESTMENT<br />YOU CAN
-            <span class="text-default">TRUST</span>
-          </h1>
-          <a href="/start" class="btn">GET STARTED</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- // Item -->
 </div>
-<script>
-  $(".headering").fitText(1.3, {
-    minFontSize: 35,
-  });
-</script>
-<div class="dark">
-  <div class="bodycontainer" style="padding: 0 30px">
-    <div
-      class="row"
-      style="
-        background: #1d1d1d;
-        top: -40px;
-        position: relative;
-        text-align: left;
-      "
-    >
-      <div class="col-4">
-        <div class="col-3 col-m-4 center">
-          <img src="/images/download-bitcoin.png" />
-        </div>
-        <div class="col-9 col-m-8 center-sm">
-          <h5 class="text-white">Open an account</h5>
-          <p>
-            To start enjoying our services and enjoying high and stable profits
-            from investments and cloud mining first create an account on our
-            platform.
-          </p>
+<div id="pjax-container">
+  <div id="block-content" class="">
+    <header class="header header--home">
+      <div class="header__mainimage"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="topline header__topline">
+              <a href="/" class="logo topline__logo" width="100" data-pjax>
+                <img
+                  src="/assets/img/logo.png"
+                  alt="Golden"
+                  style="width: 180px"
+                />
+              </a>
+              <nav class="menu topline__menu header__menu" id="js-menu">
+                <a href="/" class="menu__link" id="js-menu-home" data-pjax>
+                  Home
+                </a>
+                <a
+                  href="/about"
+                  class="menu__link"
+                  id="js-menu-about"
+                  data-pjax
+                >
+                  About us
+                </a>
+                <a
+                  href="/investment"
+                  class="menu__link"
+                  id="js-menu-investment"
+                  data-pjax
+                >
+                  Investment
+                </a>
+                <a
+                  href="/partners"
+                  class="menu__link"
+                  id="js-menu-partners"
+                  data-pjax
+                >
+                  Partners
+                </a>
+                <a
+                  href="/contact"
+                  class="menu__link"
+                  id="js-menu-contact"
+                  data-pjax
+                >
+                  Contact us
+                </a>
+                <span class="dropdown menu__link">
+                  <span class="dropdown-toggle" data-toggle="dropdown">
+                    <img
+                      src="/assets/default/images/flags/en.svg"
+                      style="width: 20px"
+                    />
+                  </span>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#" data-pjax>
+                        <img
+                          src="/assets/default/images/flags/en.svg"
+                          style="width: 20px"
+                          class="mr-1"
+                        />English</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-pjax>
+                        <img
+                          src="/assets/default/images/flags/ru.svg"
+                          style="width: 20px"
+                          class="mr-1"
+                        />Русский</a
+                      >
+                    </li>
+                  </ul>
+                </span>
+              </nav>
+              <div class="topline__controls">
+                <% if(req.user){%>
+                <div class="header__login">
+                  &nbsp;
+                  <a href="/dashboard" class="btn btn-warning" data-pjax
+                    >Dashboard</a
+                  >
+                </div>
+                <% }else{%>
+                <div class="header__login">
+                  &nbsp;
+                  <a href="/signin" class="btn btn-warning" data-pjax>
+                    &nbsp; Login
+                  </a>
+                  <a href="/signup" class="btn btn-signup" data-pjax>
+                    &nbsp; Register
+                  </a>
+                </div>
+                <%}%>
+                <span class="burger header__burger" id="js-menu-burger">
+                  <i class="fa fa-bars"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6">
+            <div class="header__content">
+              <h1 class="header__h1">Providing the stable income 10% daily</h1>
+              <p class="header__text">
+                <%= res.locals.sitename %> is an innovative company engaged
+                <br />in investments in gold and provide the stable income 10%
+                daily.
+              </p>
+              <a href="/signup" class="btn btn-warning header__btn" data-pjax>
+                Register
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="col-3 col-m-4 center">
-          <img src="/images/add-bitcoins.png" />
-        </div>
-        <div class="col-9 col-m-8 center-sm">
-          <h5 class="text-white">Add Funds & Start Investment</h5>
-          <p>Add bitcoins you’ve created or exchanged via credit card.</p>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="col-3 col-m-4 center">
-          <img src="/images/buy-sell-bitcoins.png" />
-        </div>
-        <div class="col-9 col-m-8 center-sm">
-          <h5 class="text-white">Withdraw Your Profit</h5>
-          <p>Request for withdrawal and receive it within 1day.</p>
-        </div>
-      </div>
+    </header>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async
+      >
+        {
+        	"symbols": [
+        		{
+        			"proName": "FOREXCOM:SPXUSD",
+        			"title": "S&P 500"
+        		},
+        		{
+        			"proName": "FOREXCOM:NSXUSD",
+        			"title": "Nasdaq 100"
+        		},
+        		{
+        			"proName": "FX_IDC:EURUSD",
+        			"title": "EUR/USD"
+        		},
+        		{
+        			"proName": "BITSTAMP:BTCUSD",
+        			"title": "BTC/USD"
+        		},
+        		{
+        			"proName": "BITSTAMP:ETHUSD",
+        			"title": "ETH/USD"
+        		}
+        	],
+        		"showSymbolLogo": true,
+        			"colorTheme": "dark",
+        				"isTransparent": true,
+        					"displayMode": "regular",
+        						"locale": "en"
+        }
+      </script>
     </div>
-    <div class="center">
-      <h1 class="tlt text-white">ABOUT <span class="text-default">US</span></h1>
-      <p class="sub_tlt">MOST FLEXIBLE CRYPTOCURRENCY INVESTMENT COMPANY</p>
-    </div>
+    <!-- TradingView Widget END -->
+    <section class="section section-team textsite titlesite">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+            <div class="statitem">
+              <div class="statitem__icon icongold">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <div class="statitem__label">Total Withdrawals</div>
+              <div class="statitem__value gold">
+                $ <span class="count">523328599</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+            <div class="statitem">
+              <div class="statitem__icon icongold">
+                <i class="fa fa-users"></i>
+              </div>
+              <div class="statitem__label">Investors</div>
+              <div class="statitem__value gold">
+                <span class="count">43989</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 mb-sm-0">
+            <div class="statitem">
+              <div class="statitem__icon icongold">
+                <i class="fa fa-university"></i>
+              </div>
+              <div class="statitem__label">Total Investments</div>
+              <div class="statitem__value gold">
+                $ <span class="count">719551902</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 mb-sm-0">
+            <div class="statitem">
+              <div class="statitem__icon icongold">
+                <i class="fa fa-credit-card"></i>
+              </div>
+              <div class="statitem__label">Total Accounts</div>
+              <div class="statitem__value gold">
+                <span class="count">823448</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      $(".count").each(function () {
+        $(this)
+          .prop("Counter", 0)
+          .animate(
+            {
+              Counter: $(this).text(),
+            },
+            {
+              duration: 5000,
+              easing: "swing",
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              },
+            }
+          );
+      });
 
-    <div class="row" style="margin-top: 20px">
-      <div class="col-6 center">
-        <img src="/images/about-us.png" />
+      setTimeout(() => {
+        document.querySelectorAll(".count").forEach((e) => {
+          e.innerText = Number(e.innerText).toLocaleString();
+        });
+      }, 6000);
+    </script>
+    <section class="section section-home textsite titlesite">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-7">
+            <div class="section-home__title">
+              <h2 class="section__h2">
+                Why did we choose <%= res.locals.sitename %>
+              </h2>
+              <h3 class="section__h3"></h3>
+            </div>
+            <p class="section__text">
+              <%= res.locals.sitename %> is a legally registered Private Limited
+              Company which was founded and transformed into an open joint-stock
+              company in order to provide access for everyone to financial
+              products offered by <%= res.locals.sitename %>. The investment
+              management potential created by the professionals working with the
+              Company had been the underlying reason of the transformation.
+              Since <%= res.locals.sitename %> has demonstrated outstanding
+              performance and significantly expanded its assets in the previous
+              period, the decision was made to start offering its investment
+              products via specialized online services. The Company is not a
+              member, associate or subdivision of any other organization, so it
+              is free to make totally independent decisions. Our team of
+              full-time financial experts ensures effective and quick analysis
+              of the current financial situation. Our mission is to provide
+              every person the opportunity to gain maximal profit from investing
+              at minimal risk..
+            </p>
+            <a
+              href="indexe47ee47e.html?a=about"
+              class="btn btn-outline-warning section-home__btn textsite"
+              data-pjax
+            >
+              Learn more
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-5">
+            <div
+              style="
+                height: 433px;
+                background-color: #1d2330;
+                overflow: hidden;
+                box-sizing: border-box;
+                border: 1px solid #282e3b;
+                border-radius: 4px;
+                text-align: right;
+                line-height: 14px;
+                font-size: 12px;
+                font-feature-settings: normal;
+                text-size-adjust: 100%;
+                box-shadow: inset 0 -20px 0 0 #262b38;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+              "
+            >
+              <div
+                style="height: 413px; padding: 0px; margin: 0px; width: 100%"
+              >
+                <iframe
+                  src="https://widget.coinlib.io/widget?type=full_v2&amp;theme=dark&amp;cnt=6&amp;pref_coin_id=1505&amp;graph=yes"
+                  width="100%"
+                  height="409px"
+                  scrolling="auto"
+                  marginwidth="0"
+                  marginheight="0"
+                  frameborder="0"
+                  border="0"
+                  style="border: 0; margin: 0; padding: 0"
+                ></iframe>
+              </div>
+              <div
+                style="
+                  color: #626b7f;
+                  line-height: 14px;
+                  font-weight: 400;
+                  font-size: 11px;
+                  box-sizing: border-box;
+                  padding: 2px 6px;
+                  width: 100%;
+                  font-family: Verdana, Tahoma, Arial, sans-serif;
+                "
+              >
+                <a
+                  href="https://coinlib.io/"
+                  target="_blank"
+                  style="
+                    font-weight: 500;
+                    color: #626b7f;
+                    text-decoration: none;
+                    font-size: 11px;
+                  "
+                  >Cryptocurrency Prices</a
+                >&nbsp;by Coinlib
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-6">
-        <h2 class="text-white">WE ARE <%= res.locals.siteName%></h2>
-        <p>
-          <%= res.locals.siteName%> Company is a distinctive investment company
-          offering our investors access to high-growth investment opportunities
-          in Bitcoin markets and other services. We implement best practices of
-          trading & mining of Bitcoins through our operations, while offering
-          flexibility in our investment plans. Our company benefits from an
-          extensive network of global clients.
-        </p>
-        <div id="tabs" style="margin-bottom: 20px">
-          <ul>
-            <li><a href="#tabs-1">OUR MISSION</a></li>
-            <li><a href="#tabs-2">OUR ADVANTAGES</a></li>
-            <li><a href="#tabs-3">OUR GUARANTEES</a></li>
-          </ul>
-          <div id="tabs-1">
-            <p>
-              Our aim is to utilize our expertise & knowledge which will benefit
-              our clients and the users of our services.
+    </section>
+    <section class="services textsite titlesite">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section__title">
+            <h2 class="section__h2">Our Features</h2>
+            <h3 class="section__h3">
+              Accruals in all plans are carried out for life.
+            </h3>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item text-center">
+              <div class="services-icon"><i class="tf-profile-male"></i></div>
+              <h4 class="service-title">TEAM</h4>
+              <p class="service-description text-justify">
+                We are a well-coordinated team that takes responsibility for
+                fulfilling the contract. You could not find a better place.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item text-center">
+              <div class="services-icon"><i class="tf-document3"></i></div>
+              <h4 class="service-title">WARRANTY</h4>
+              <p class="service-description text-justify">
+                The stability of our company and income guarantee that your
+                deposit is safe throughout the entire investment plan.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item text-center">
+              <div class="services-icon"><i class="tf-chat"></i></div>
+              <h4 class="service-title">24/7 SUPPORT</h4>
+              <p class="service-description text-justify">
+                Our support team is at your disposal 24 hours a day, 7 days a
+                week. If you have any questions, write to us.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <div class="services-icon"><i class="tf-wallet"></i></div>
+            <h4 class="service-title">INSTANT WITHDRAWALS</h4>
+            <p class="service-description text-justify">
+              You can withdraw money at any time if your balance allows it.
+              Minimum withdrawal amount is only 2 USD
             </p>
           </div>
-          <div id="tabs-2">
-            <p>
-              Our mission as an official partner of Bitcoin Foundation is to
-              help you enter and better understand the world of #1
-              cryptocurrency and avoid any issues you may encounter.
-            </p>
-          </div>
-          <div id="tabs-3">
-            <p>
-              We are here because we are passionate about open, transparent
-              markets and aim to be a major driving force in widespread
-              adoption, we are one the bests in cryptocurrency investment.
+        </div>
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <div class="services-icon"><i class="tf-desktop"></i></div>
+            <h4 class="service-title">DEDICATED SERVER</h4>
+            <p class="service-description text-justify">
+              Our site is located on a very secure and stable dedicated
+              server.You do not have to worry about any breaks in its operation.
             </p>
           </div>
         </div>
-        <a
-          href="https://find-and-update.company-information.service.gov.uk/company/"
-          class="btn default"
-          target="_blank"
-          >CHECK COMPANY CERTIFICATE</a
-        >
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="darkgrey">
-  <div class="bodycontainer-left">
-    <div class="row lineup">
-      <div class="col-8 center">
-        <div class="col-6 col-m-6">
-          <div>
-            <img src="/images/strong-security.png" style="height: 40px" />
+        <div class="col-md-4">
+          <div class="service-item text-center">
+            <div class="services-icon"><i class="tf-lock2"></i></div>
+            <h4 class="service-title">EV-SSL SAFETY</h4>
+            <p class="service-description text-justify">
+              Your data is secured with an EV-SSL certificate, guaranteeing the
+              confidentiality of their transmission.
+            </p>
           </div>
-          <h5 class="text-white">STRONG SECURITY</h5>
-          <p>Protection against DDoS attacks,<br />full data encryption</p>
-        </div>
-        <div class="col-6 col-m-6">
-          <div>
-            <img src="/images/world-coverage.png" style="height: 40px" />
-          </div>
-          <h5 class="text-white">WORLD COVERAGE</h5>
-          <p>Providing services in 99% countries<br />around all the globe</p>
-        </div>
-        <div class="col-6 col-m-6">
-          <div>
-            <img src="/images/payment-options.png" style="height: 40px" />
-          </div>
-          <h5 class="text-white">PAYMENT OPTIONS</h5>
-          <p>Popular methods: Bitcoin, Ethereum,<br />Skril</p>
-        </div>
-        <div class="col-6 col-m-6">
-          <div>
-            <img src="/images/mobile-app.png" style="height: 40px" />
-          </div>
-          <h5 class="text-white">MOBILE FRIENDLY</h5>
-          <p>Our User Dashboard is Made<br />to match all Mobile resolution</p>
-        </div>
-        <div class="col-6 col-m-6">
-          <div>
-            <img src="/images/cost-efficiency.png" style="height: 40px" />
-          </div>
-          <h5 class="text-white">COST EFFICIENCY</h5>
-          <p>Reasonable trading fees for traders<br />and all market makers</p>
-        </div>
-        <div class="col-6 col-m-6">
-          <div>
-            <img src="/images/high-liquidity.png" style="height: 40px" />
-          </div>
-          <h5 class="text-white">HIGH LIQUIDITY</h5>
-          <p>
-            Fast access to high liquidity orderbook<br />for top currency pairs
-          </p>
         </div>
       </div>
-      <div class="col-4 video-lightbox">
-        <a
-          href="#"
-          class="play circle js-video-button"
-          data-video-id="GmOzih6I1zs"
-          ><i class="fa fa-play"></i
-        ></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="dark" style="padding: 40px 20px 80px 20px" id="investment">
-  <div class="bodycontainer center">
-    <h1 class="tlt text-white">
-      AFFORDABLE <span class="text-default">PACKAGES</span>
-    </h1>
-    <p class="sub_tlt">CHOOSE YOUR PREFERABLE PLAN FOR INVESTMENT.</p>
-    <div class="row">
-      <div class="col-4 col-m-12">
-        <div class="pricing_header default">
-          <h3 class="bold">BRONZE PLAN</h3>
-          <h6 class="bold">1,000GHZ/S HASH RATE</h6>
+    </section>
+    <section class="inv-plans bg-iv-plan textsite titlesite bagblack">
+      <div class="container">
+        <div class="col-md-12 section__title">
+          <h2 class="section__h2">Choose a suitable investment plan</h2>
+          <h3 class="section__h3">What do we offer to investors?</h3>
         </div>
-        <div class="pricing_body">
-          <ul>
-            <li>MINIMUM INVESTMENT: $500</li>
-            <li>MAXIMUM INVESTMENT: $1,000</li>
-            <li>R.I.O: 15%</li>
-            <li>PERIOD: 23 DAYS</li>
-            <li>UNLIMITED WITHDRAWALS</li>
-            <li>REFERRAL BONUS: 7% + $2</li>
-            <li>24/7 SUPPORT: YES</li>
-          </ul>
-        </div>
-        <div class="pricing_footer">
-          <a href="/register" class="btn default round-xxlarge">INVEST NOW</a>
-        </div>
-      </div>
-
-      <!--YOU CAN CHANGE YOUR NEXT PLAN-->
-
-      <div class="col-4 col-m-12">
-        <div class="pricing_header default">
-          <h3 class="bold">SLIVER PLAN</h3>
-          <h6 class="bold">2,000GHZ/S HASH RATE</h6>
-        </div>
-        <div class="pricing_body">
-          <ul>
-            <li>MINIMUM INVESTMENT: $1,000</li>
-            <li>MAXIMUM INVESTMENT: $5,000</li>
-            <li>R.I.O: 25%</li>
-            <li>PERIOD: 17 DAYS</li>
-            <li>UNLIMITED WITHDRAWALS</li>
-            <li>REFERRAL BONUS: 11% + $2</li>
-            <li>24/7 SUPPORT: YES</li>
-          </ul>
-        </div>
-        <div class="pricing_footer">
-          <a href="/register" class="btn default round-xxlarge">INVEST NOW</a>
-        </div>
-      </div>
-
-      <!--YOU CAN CHANGE YOUR NEXT PLAN-->
-
-      <div class="col-4 col-m-12">
-        <div class="pricing_header default">
-          <h3 class="bold">GOLD PLAN</h3>
-          <h6 class="bold">10,000GHZ/S SPEED RATE</h6>
-        </div>
-        <div class="pricing_body">
-          <ul>
-            <li>MINIMUM INVESTMENT: $5,000</li>
-            <li>NO MAXIMUM INVESTMENT</li>
-            <li>R.I.O: 40%</li>
-            <li>PERIOD: 14 DAYS</li>
-            <li>UNLIMITED WITHDRAWALS</li>
-            <li>REFERRAL BONUS: 15% + $2</li>
-            <li>24/7 SUPPORT: YES</li>
-          </ul>
-        </div>
-        <div class="pricing_footer">
-          <a href="/register" class="btn default round-xxlarge">INVEST NOW</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<style>
-  .irs-single,
-  .irs-min,
-  .irs-max {
-    display: none !important;
-  }
-
-  .irs-bar {
-    border-top: 1px solid #0af !important;
-    border-bottom: 1px solid #0af !important;
-    background: #0af !important;
-  }
-
-  .irs-bar-edge {
-    border: 1px solid #0af !important;
-    background: #0af !important;
-    background: #0af !important;
-  }
-
-  .irs-slider {
-    border: 3px solid #aaa !important;
-    background: #0af !important;
-  }
-</style>
-<link rel="stylesheet" href="css/ion.rangeSlider.css" />
-<link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css" />
-<script src="/js/ion.rangeSlider.min.js"></script>
-<script>
-  var $range = $(".range_47");
-  $range.ionRangeSlider();
-
-  $range.on("change", function () {
-    var $this = $(this),
-      value = $this.prop("value");
-    var output = $this.prop("value") * ($this.data("cent") / 100);
-    $("#" + $this.data("id")).val("$ " + $this.prop("value"));
-    $("#" + $this.data("per")).php("$ " + output.toFixed(1));
-    $("#" + $this.data("total")).php(
-      "$ " + (output * $this.data("times")).toFixed(1)
-    );
-    console.log("Value: " + value);
-  });
-</script>
-<div
-  class="calculator-container"
-  style="position: relative; top: -50px; margin-bottom: -50px"
->
-  <div class="bodycontainer center" style="padding: 0 20px">
-    <form class="bitcoin-calculator round-large cards" id="bitcoin-calculator">
-      <h1 class="tlt text-white">
-        <span class="text-default">BITCOIN</span> CALCULATOR
-      </h1>
-      <p style="margin: 20px 0; font-size: 14px">
-        FIND OUT THE CURRENT BITCOIN VALUE WITH OUR EASY-TO-USE CONVERTER
-      </p>
-      <div style="margin: 20px 0">
-        <!-- Input #1 Starts -->
-        <input class="form-input" name="btc-calculator-value" value="1" />
-        <!-- Input #1 Ends -->
-        <div class="form-info"><i class="fa fa-bitcoin"></i></div>
-        <div class="form-equal">=</div>
-        <!-- Input/Result Starts -->
-        <input
-          class="form-input form-input-result"
-          name="btc-calculator-result"
-        />
-        <!-- Input/Result Ends -->
-        <!-- Select Currency Starts -->
-        <div class="form-wrap">
-          <select
-            id="currency-select"
-            class="form-input select-currency select-primary select2-hidden-accessible"
-            name="btc-calculator-currency"
-            data-dropdown-class="select-primary-dropdown"
-            tabindex="-1"
-            aria-hidden="true"
+        <div class="row">
+          <div
+            class="col-sm-4 wow fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay="0s"
+            cellspacing="0"
+            style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0s;
+              animation-name: fadeInUp;
+            "
           >
-            <option value="0">USD</option>
-            <option value="1">AUD</option>
-            <option value="2">BRL</option>
-            <option value="3">CAD</option>
-            <option value="4">CHF</option>
-            <option value="5">CLP</option>
-            <option value="6">CNY</option>
-            <option value="7">DKK</option>
-            <option value="8">EUR</option>
-            <option value="9">GBP</option>
-            <option value="10">HKD</option>
-            <option value="11">INR</option>
-            <option value="12">ISK</option>
-            <option value="13">JPY</option>
-            <option value="14">KRW</option>
-            <option value="15">NZD</option>
-            <option value="16">PLN</option>
-            <option value="17">RUB</option>
-            <option value="18">SEK</option>
-            <option value="19">SGD</option>
-            <option value="20">THB</option>
-            <option value="21">TWD</option>
-          </select>
+            <div class="plans">
+              <div class="plan_details text-center">
+                <div class="plan_title">Standard Plan</div>
+                <div class="percentage">10%</div>
+                <p class="profit_duration">After 24 Hours</p>
+                <ul class="list-items">
+                  <li class="list-item">Deposit Included</li>
+                  <li class="list-item">Minimum $50</li>
+                  <li class="list-item">Maximum $1999.9</li>
+                </ul>
+                <div class="plans_btn">
+                  <a class="btn btn-warning" href="signinc30b.html?a=login"
+                    >Deposit Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-sm-4 wow fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay="0s"
+            cellspacing="0"
+            style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0s;
+              animation-name: fadeInUp;
+            "
+          >
+            <div class="plans cyne">
+              <div class="plan_details text-center">
+                <div class="plan_title">Classic Plan</div>
+                <div class="percentage">30%</div>
+                <p class="profit_duration">After 48 Hours</p>
+                <ul class="list-items">
+                  <li class="list-item">Deposit Included</li>
+                  <li class="list-item">Minimum $2000</li>
+                  <li class="list-item">Maximum $9999.99</li>
+                </ul>
+                <a class="btn btn-warning" href="signinc30b.html?a=login"
+                  >Deposit Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-sm-4 wow fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay="0s"
+            cellspacing="0"
+            style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0s;
+              animation-name: fadeInUp;
+            "
+          >
+            <div class="plans magenta">
+              <div class="plan_details text-center">
+                <div class="plan_title">Premium Plan</div>
+                <div class="percentage">60%</div>
+                <p class="profit_duration">After 7 Day</p>
+                <ul class="list-items">
+                  <li class="list-item">Deposit Included</li>
+                  <li class="list-item">Minimum $10,000</li>
+                  <li class="list-item">Maximum Unlimited</li>
+                </ul>
+                <a class="btn btn-warning" href="signinc30b.html?a=login"
+                  >Deposit Now</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Select Currency Ends -->
+        <br />
+        <br />
+        <section class="invest_plans">
+          <div class="container p-0">
+            <div class="row" style="padding-bottom: 100px">
+              <div class="col-sm-12 col-md-6">
+                <div class="bg-gradiant">
+                  <div class="d-flex">
+                    <div class="plan-drops">
+                      <div class="plans-label one" style="color: #facd8a">
+                        Select your plan
+                      </div>
+                      <select id="calc_plan" class="form-control">
+                        <option value="1" class="opts">
+                          10% After 24 Hours
+                        </option>
+                        <option value="2" class="opts">
+                          30% After 48 Hours
+                        </option>
+                        <option value="3" class="opts">60% After 7 days</option>
+                      </select>
+                    </div>
+                    <div class="plan-drops">
+                      <div class="plans-label" style="color: #facd8a">
+                        Deposit Amount
+                      </div>
+                      <input
+                        id="inv_amount"
+                        value="50"
+                        name="limitedtextfield"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="bg-gradiant two">
+                  <div class="d-flex">
+                    <div class="plans-label">
+                      <span style="color: #facd8a">Daily</span>
+                      <div class="calcblock__value">
+                        <span
+                          id="total_day"
+                          style="color: rgba(255, 255, 255, 0.8) !important"
+                          >0.00</span
+                        >
+                        <span
+                          style="color: rgba(255, 255, 255, 0.8) !important"
+                        >
+                          USD
+                        </span>
+                      </div>
+                    </div>
+                    <div class="plans-label">
+                      <div class="calcblock__cell textsite">
+                        <span style="color: #facd8a">Weekly</span>
+                        <div class="calcblock__value">
+                          <span id="total_week">0.00</span> USD
+                        </div>
+                      </div>
+                    </div>
+                    <div class="plans-label">
+                      <div class="calcblock__cell textsite">
+                        <span style="color: #facd8a">Mounthly</span>
+                        <div class="calcblock__value">
+                          <span id="total_return">0.00</span> USD
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <p><i>* Data updated every 15 minutes</i></p>
-    </form>
-  </div>
-  <div class="bitcoin-calculator-bg"></div>
-</div>
-<style>
-  .btcwdgt.btcwdgt-chart .btcwdgt-footer {
-    display: none !important;
-  }
+    </section>
+    <section class="section section-affilate textsite titlesite">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 section__title">
+            <h2 class="section__h2">Referral Commission</h2>
+            <h3 class="section__h3">2 level affiliate program</h3>
+          </div>
+          <div class="col-md-6">
+            <p class="section__text">
+              At <%= res.locals.sitename %>, we believe that advertising about
+              our services by our satisfied clients is the best way to grow
+              business. Keeping this in mind, <%= res.locals.sitename %> founded
+              an amazing lucrative reward in terms of two level affiliate
+              program.
+            </p>
+            <br />
+            <p class="section__text">
+              <%= res.locals.sitename %> is paying for the popularization of its
+              investment program and anyone can be rewarded. To benefit from
+              this, you have to refer your friends, relatives and colleagues in
+              your network through a referral link. You can earn on our
+              affiliate program and withdraw referral rewards regardless of the
+              presence of a deposit in the project.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="affilates section-affilate__affilates">
+              <div class="affilate affilates__affilate">
+                <div class="affilate__label">1 level</div>
+                <div class="affilate__value">3%</div>
+              </div>
+              <div class="affilate affilates__affilate">
+                <div class="affilate__label">2 level</div>
+                <div class="affilate__value">1%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-team">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="text-center">
+              <img src="/assets/img/pslogo/pyusd.png" alt="Payeer" />
+              <img src="/assets/img/pslogo/pmusd.png" alt="PerfectMoney" />
+              <img src="/assets/img/pslogo/btc.png" alt="Bitcoin" />
+              <img src="/assets/img/pslogo/eth.png" alt="Ethereum" />
+              <img src="/assets/img/pslogo/ltc.png" alt="Litecoin" />
+              <img src="/assets/img/pslogo/doge.png" alt="Dogecoin" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row" style="margin-top: 50px">
+              <div class="col-md-12">
+                <div class="row equal">
+                  <div
+                    class="col-md-8 no-padding wow fadeInLeft"
+                    data-wow-delay="0.2s"
+                    style="
+                      visibility: visible;
+                      animation-delay: 0.2s;
+                      animation-name: fadeInLeft;
+                      min-height: 180px;
+                    "
+                  >
+                    <div class="incrop-left" style="min-height: 100%">
+                      <div class="incrop-left-img">
+                        <img src="/assets/img/uk.png" />
+                        <h4
+                          class="step__title"
+                          style="padding-bottom: 15px; color: #facd8a"
+                        >
+                          UK Registered Company
+                        </h4>
+                        <p>
+                          <%= res.locals.sitename %> is a fully registered and
+                          licensed company in UK. <%= res.locals.sitename %> is
+                          powered by the latest and most secure form of SSL data
+                          encryption to keep all your data and information safe
+                          and secure.
+                        </p>
+                      </div>
+                      <div class="incrop-right-img">
+                        <embed src="certificate.png" width="250" height="200" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  .btcwdgt-headlines.btcwdgt-clean {
-    margin: 0 auto !important;
-    border: 1px solid #333 !important;
-    box-shadow: none !important;
-    max-width: 615px !important;
-    width: 100%;
-  }
-</style>
-<div class="dark">
-  <div class="row lineup">
-    <div class="col-4 col-m-12 testimony-lightbox">
-      <div class="bodycontainer center-mode" style="position: relative">
-        <ul class="testimonials" style="padding: 40px 20px">
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  Thanks guys for such competence. its great working with the
-                  <%= res.locals.siteName%> team
-                </p>
-              </span>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="topline footer__topline">
+                  <a href="index.html" class="logo topline__logo">
+                    <img
+                      src="/assets/img/logo.png"
+                      alt="Golden"
+                      style="width: 180px"
+                    />
+                  </a>
+                  <nav class="menu topline__menu footer__menu">
+                    <a href="/" class="menu__link" data-pjax> Home </a>
+                    <a href="/about" class="menu__link" data-pjax> About us </a>
+                    <a href="/investment" class="menu__link" data-pjax>
+                      Investment
+                    </a>
+                    <a href="/partners" class="menu__link" data-pjax>
+                      Partners
+                    </a>
+                    <a href="/terms" class="menu__link" data-pjax> Terms </a>
+                    <a href="/contact" class="menu__link" data-pjax>
+                      Contact us
+                    </a>
+                  </nav>
+                  <div
+                    class="footer__socfooter topline__controls"
+                    style="height: initial"
+                  >
+                    <a></a>
+                    <a></a>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://youtube.com/" target="_blank">
+                      <i class="fa fa-youtube"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="author">
-              <img src="trade/images/avatar.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Annie</div>
+            <div class="footer__copyright">
+              © 2021 <%= res.locals.sitename %>. ALL RIGHTS RESERVED.
             </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  Coming across <%= res.locals.siteName%> Investmnt company has
-                  been one of the best things that happened to me, i earn
-                  passive income thanks to you guys
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="trade/images/avatar.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Allen Woods</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  I make $300 fortnightly from <%= res.locals.siteName%> Company
-                  thank you for giving me this opportunity God bless Malachi
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="/images/avatar.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Ryan</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  I got my first investment profit of $15k. Big thanks to you
-                  guys at <%= res.locals.siteName%>.???
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="trade/uploads/small/8671597592136.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Robert Pope</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  Big shout out to you guys at <%= res.locals.siteName%>. I just
-                  got my Bitcoin back. I love you guyz
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="uploads/small/8211597591949.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Steve Walter</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  I&#39;m indeed grateful. I want to thank you guys for keeping
-                  to your words.
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="uploads/small/4991597591857.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Ruth Allison</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  Thank you <%= res.locals.siteName%>. I&#39;m debt free. I have
-                  been able to repay my loan of $64,000????
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="uploads/small/6981597591504.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Veronica Keith</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  Thank you <%= res.locals.siteName%>. You guys are amazing. I
-                  just recovered my lost bitcoin of 2.6BTC. ????
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="uploads/small/4941597591323.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Abraham willard</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  I want to thank <%= res.locals.siteName%>, i just received the
-                  sum of $17k from my investment. My whole family is indeed
-                  happy. I&#39;m hoping to invest big by next week.
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="uploads/small/5761597590797.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Fatimah Harmed</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  I&#39;m now a super woman because of you guys. Thank you <%=
-                  res.locals.siteName%>.
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="uploads/small/5321597006964.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Hanna jackson</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>Thank you <%= res.locals.siteName%>.</p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="uploads/small/5221597006888.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Howard keil</div>
-            </div>
-          </li>
-          <li>
-            <div class="padding">
-              <span class="comment">
-                <p>
-                  You guys are amazing. Thank you now I&#39;m financially
-                  stable. <%= res.locals.siteName%> is the best
-                </p>
-              </span>
-            </div>
-            <div class="author">
-              <img src="uploads/small/6961597006775.png" class="circle" />
-              <div style="margin-top: 10px" class="bold">Oliver moore</div>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="col-8 col-m-12 center">
-      <div class="bodycontainer">
-        <div class="btcwdgt-chart" bw-theme="dark" style="width: 100%"></div>
-      </div>
-    </div>
+    </footer>
   </div>
-</div>
 
-<div class="footer_bg center">
-  <div class="area">
-    <div class="bodycontainer">
-      <div style="z-index: 2; position: relative">
-        <h2 class="margintb">GET STARTED TODAY WITH BITCOIN INVESTMENT</h2>
-        <p class="margintb">
-          Open account for free and start trading Bitcoins!
-        </p>
-        <a href="/start" class="btn">GET STARTED</a>
-      </div>
-    </div>
-  </div>
+  <link rel="stylesheet" href="/assets/libs/bootstrap/fileinput.min.css" />
+  <script src="/assets/libs/bootstrap/bootstrap.min.js"></script>
+  <script src="/assets/libs/bootstrap/fileinput.min.js"></script>
+  <script>
+    $(function () {
+      $("#p-1-tabs .icontext").click(function (e) {
+        e.preventDefault();
+        $(this).tab("show");
+      });
+      $("#p-1-tabs .icontext").on("shown.bs.tab", function (e) {
+        $("#p-1-tabs .icontext").removeClass("active");
+        $(e.target).addClass("active");
+      });
+    });
+  </script>
+  <script>
+    addClass(document.getElementById("js-menu-home"), "menu__link--active");
+    setTimeout(function () {
+      var payments = document.getElementsByClassName("js-header-oper");
+      for (var i = 0; i < payments.length; i++) {
+        payments[i].style.bottom = null;
+        payments[i].style.opacity = null;
+      }
+    }, 500);
+  </script>
 </div>

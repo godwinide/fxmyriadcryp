@@ -6,7 +6,6 @@ const session = require('express-session');
 const passport = require("passport")
 const expressLayout = require("express-ejs-layouts");
 const fileUpload = require("express-fileupload");
-const Site = require("./model/Site");
 
 // CONFIGS
 require("dotenv").config();
@@ -21,7 +20,11 @@ app.use(express.urlencoded({
   extended: true
 }));
 app.use(express.json());
-app.use(fileUpload({}))
+app.use(fileUpload({
+  limits: { fileSize: 50 * 1024 * 1024 },
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}))
 app.use(flash());
 app.use(
   session({
@@ -35,9 +38,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Global variables
-app.use(async function (req, res, next) {
-  res.locals.siteName = "FX Myriad Cryp"
-  res.locals.siteDomain = "fxmyriadcryp.pro"
+app.use(function (req, res, next) {
+  res.locals.sitename = "FX Myriad Crypto"
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
